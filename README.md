@@ -1,6 +1,6 @@
 # Student Study Portal
 
-This is a Student Study Portal using Python, SQL and Django framework.
+This is a Full Stack Project named Student Study Portal using Python, SQL and Django framework.
 
 The Student Study Portal is a web-based platform designed to streamline access to educational resources. It allows students to register, log in, and access course materials, assignments, and academic updates. The portal also offering features like notes, todo, homeworks, and can access youtube, wikipedia and books. Built using technologies like Python for backend, (HTML,CSS,JS) for frontend, Django for framework and MySQL for database management, the project emphasizes user-friendly navigation, secure authentication, and scalability for academic institutions.
 
