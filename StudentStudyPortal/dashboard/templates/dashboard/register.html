@@ -1,0 +1,50 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-12">
+      <div class="card shadow-lg p-4">
+        <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4 text-center text-info">Register Now</legend>
+        
+            <div class="form-group">
+              <label for="id_username" class="font-weight-bold">Username</label>
+              <input type="text" name="username" class="form-control" id="id_username" placeholder="Enter your username" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="id_email" class="font-weight-bold">Email</label>
+              <input type="email" name="email" class="form-control" id="id_email" placeholder="Enter your email" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="id_password1" class="font-weight-bold">Password</label>
+              <input type="password" name="password1" class="form-control" id="id_password1" placeholder="Enter your password" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="id_password2" class="font-weight-bold">Confirm Password</label>
+              <input type="password" name="password2" class="form-control" id="id_password2" placeholder="Confirm your password" required>
+            </div>
+          </fieldset>
+        
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-info btn-lg w-100">
+              Sign Up
+            </button>
+          </div>
+        </form>
+        
+        <div class="border-top pt-3 text-center">
+          <small class="text-muted">Already have an account? 
+            <a href="{% url 'login' %}" class="text-info">Sign In</a>
+          </small>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

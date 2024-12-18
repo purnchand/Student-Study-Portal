@@ -1,0 +1,42 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class='text-center container'>
+    <h2><b>Wikipedia<b></h2>
+    <p>Search articles to obtain the results!!!</p>
+    <h6><u>Note</u>: Enter without any space.....</h6>
+    <form action="" method="post">
+        {% csrf_token %}
+        <b>{{form}}<b>
+        <input class="btn btn-danger" type="submit" value="Submit">
+    </form><br>
+
+    <div class="container">
+    <div class="content-section p-0 mt-5">
+        <a href="{{ link }}" class="p-0 m-0" target="_blank">
+            <div class="custom-header card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-center">{{ title }}</h2>
+                            <h6 class="text-center text-muted">{{ link }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <hr class="p-0 m-0">
+        <div class="card-body">
+            <p class="description p-4" style="font-size: 16px;">
+                {{ details }}
+            </p>
+        </div>
+        <hr class="p-0 m-0">
+    </div>
+</div>
+
+<br>
+
+{% endblock content %}

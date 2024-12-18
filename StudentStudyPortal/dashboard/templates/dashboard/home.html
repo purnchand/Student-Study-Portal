@@ -1,0 +1,103 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="container text-center">
+<h2 style="color: blue">Welcome</h2>
+<hr>
+
+  <!-- First Row - 3 blocks -->
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <a href="{%url 'notes'%}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'image/notes.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title">
+              Notes
+            </h5>
+            Keep your ideas organized and accessible anytime. Create, store, and manage your notes effortlessly.
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <a href="{% url 'homework' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'image/homework.jpg' %}" alt="Homework image">
+          <div class="card-body">
+            <h5 class="card-title">
+              Homework
+            </h5>
+            Stay on top of deadlines with a simple homework tracker. Prioritize and complete tasks on time.
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <a href="{% url 'youtube' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'image/youtube.jpg' %}" alt="YouTube image">
+          <div class="card-body">
+            <h5 class="card-title">
+              YouTube
+            </h5>
+            Instantly search and watch your favorite videos and explore more interesting topics without leaving the dashboard.
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Second Row - 3 blocks -->
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <a href="{%url 'books'%}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'image/books.jpg' %}" alt="Books image">
+          <div class="card-body">
+            <h5 class="card-title">
+              Books
+            </h5>
+            Explore a curated collection of books. Discover, read, and learn about your favourite books with ease.
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <a href="{% url 'wiki'%}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'image/wiki.jpg' %}" alt="Wikipedia image">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wikipedia
+            </h5>
+            Quickly find detailed information and resources for your assignments and research.
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- To Do Block -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <a href="{%url 'todo'%}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'image/todo.jpg' %}" alt="To Do image">
+          <div class="card-body">
+            <h5 class="card-title">
+              To Do
+            </h5>
+            Plan your beautiful day efficiently with a simple and effective to-do list. Check off tasks as you complete them.
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>
+{% endblock content %}
